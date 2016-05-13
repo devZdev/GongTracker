@@ -9,23 +9,36 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
 
 class GongTracker extends Component {
+  constructor() {
+    super()
+    this._onPressButton = this._onPressButton.bind(this);
+    this.state = {
+      opacity: 1
+    };
+  }
+
+  _onPressButton() {
+    console.log("working but where is the console")
+    this.setState({
+      opacity: 0.5
+    });
+  }
+
   render() {
     return (
-      <View style={styles.container}>
+      <View style={{backgroundColor: '#000'}}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Gong Tracker
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={{flexDirection: 'row', height: 100, padding: 20}}>
+          <TouchableOpacity activeOpacity={this.state.opacity} onPress={this._onPressButton} style={{backgroundColor: 'blue', flex: 0.5}} />
+          <TouchableOpacity activeOpacity={this.state.opacity} onPress={this._onPressButton} style={{backgroundColor: 'red', flex: 0.5}} />
+        </View>
       </View>
     );
   }
@@ -39,6 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
+    color: '#fff',
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
