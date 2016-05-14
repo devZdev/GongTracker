@@ -14,21 +14,6 @@ import {
 } from 'react-native';
 
 class GongTracker extends Component {
-  constructor() {
-    super()
-    this._onPressButton = this._onPressButton.bind(this);
-    this.state = {
-      opacity: 1
-    };
-  }
-
-  _onPressButton() {
-    console.log("working but where is the console")
-    this.setState({
-      opacity: 0.5
-    });
-  }
-
   render() {
     return (
       <View style={{backgroundColor: '#000'}}>
@@ -36,8 +21,8 @@ class GongTracker extends Component {
           Gong Tracker
         </Text>
         <View style={{flexDirection: 'row', height: 100, padding: 20}}>
-          <TouchableOpacity activeOpacity={this.state.opacity} onPress={this._onPressButton} style={{backgroundColor: 'blue', flex: 0.5}} />
-          <TouchableOpacity activeOpacity={this.state.opacity} onPress={this._onPressButton} style={{backgroundColor: 'red', flex: 0.5}} />
+          <TouchableOpacity style={{backgroundColor: 'blue', flex: 0.5}} />
+          <TouchableOpacity style={{backgroundColor: 'red', flex: 0.5}} />
         </View>
       </View>
     );
