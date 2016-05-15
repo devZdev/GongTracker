@@ -11,7 +11,7 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
-import ImportTest from './components/import-test'
+// import ImportTest from './components/import-test'
 
 class GongTracker extends Component {
   render() {
@@ -25,7 +25,7 @@ class GongTracker extends Component {
           <TouchableOpacity style={{backgroundColor: 'red', flex: 0.5}} />
         </View>
         <View style={{flexDirection: 'row', height: 100, padding: 20}}>
-          <ImportTest />
+          {/*<ImportTest />*/}
         </View>
       </View>
     );
