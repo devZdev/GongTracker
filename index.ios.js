@@ -19,7 +19,7 @@ class GongTracker extends Component {
     return (
       <View style={{backgroundColor: '#000'}}>
         <Text style={styles.welcome}>
-          Dong Tracker for iOS
+          Gong Tracker for iOS
         </Text>
         <View style={{flexDirection: 'row', height: 100, padding: 20}}>
           <TouchableOpacity style={{backgroundColor: 'blue', flex: 0.5}} />
