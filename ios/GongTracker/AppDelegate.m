@@ -8,7 +8,8 @@
  */
 
 #import "AppDelegate.h"
-
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 #import "RCTRootView.h"
 
 @implementation AppDelegate
@@ -53,6 +54,9 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  [Fabric with:@[[Crashlytics class]]];
+
   return YES;
 }
 
